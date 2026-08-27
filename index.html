@@ -7,6 +7,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+#sideConfetti {
+    position: fixed;
+
+    left: 50%;
+    bottom: 30%;
+
+    transform: translateX(-50%);
+
+    width: 385px;
+    height: 350px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+#sideConfetti.show {
+    opacity: 1;
+}
+
 h2{
 
 color:white;
@@ -61,7 +83,7 @@ opacity:.95;
     position: fixed;
 
     left: 50%;
-    top: 28%;
+    top: 25%;
 
     transform: translate(-50%, -50%);
 
@@ -608,6 +630,9 @@ opacity: 0.82;
       <div class="flap"></div>
       <div class="seal">💌</div>
     </div>
+<img id="sideConfetti"
+     src="Gifss/Sidedconfetti2.gif"
+     alt="">
     
      <img id="giftGifLeft"
      src="Gifss/Fireworks3.webp"
@@ -818,6 +843,7 @@ setInterval(() => {
       }, 500);
     }, 550);
     setTimeout(() => {
+document.getElementById("sideConfetti").classList.add("show");
 
     document
         .getElementById("giftGifLeft")
